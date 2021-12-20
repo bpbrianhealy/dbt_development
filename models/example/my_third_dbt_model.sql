@@ -1,7 +1,9 @@
-with letters as (
+{{ config(materialized='table') }}
+
+with vals as (
     select
-    1 as id
-    'a' as letter
+    1 as id,
+    100 as value
 )
 
-select * from letters
+select * from vals
